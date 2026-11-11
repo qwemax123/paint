@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./app.js" defer></script>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 20px;
+            
+        
+        }
+
+        .toolbar {
+          display: flex;
+          gap: 25px;
+          align-items: center;
+          margin-bottom: 10px;
+          flex-wrap: wrap;
+        }
+
+        canvas {
+          border: 1px solid #ccc;
+          background: #eee;
+          display: block;
+          cursor: crosshair;
+       }
+    </style>
+</head>
+<body>
+
+    <div class="toolbar">
+        <label>
+            Цвет:
+            <input type="color" id="color" value="#000">
+        </label>
+
+        <label>
+            Кисть:
+            <select id="brush">
+                <option value="round">Круглая</option>
+                <option value="square">Квадратная</option>
+            </select>
+        </label>
+
+        <label>
+            Размер:
+            <input type="range" id="size" min="1" max="40" value="5">
+        </label>
+
+        <label>
+            <input type="checkbox" id="eraser"> Ластик
+        </label>
+    </div>
+
+    <canvas id="canvas" width="1000" height="500"></canvas>
+
+    
+</body>
+</html>
